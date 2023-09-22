@@ -17,12 +17,10 @@ export default function Genre(props){
     const [searchMovieDeets, setSearchMovieDeets] = useState([])
     const [movieGenre, setMovieGenre] = useState('')
     const [movieStore, setMovieStore] = useState([])
-    const API_KEY = "71ce448194fce252de3997ca31c501d0"
-    const ACCESS_TOKEN = " eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MWNlNDQ4MTk0ZmNlMjUyZGUzOTk3Y2EzMWM1MDFkMCIsInN1YiI6IjVmOTU4M2VhMWZkMzZmMDA1ZTQ3NmNlMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ff2sjz35zGL4-IaBjxuyGZmBbQioDlaMPD-1oWMp5jc"
     
     const header = {
       headers: {
-        Authorization: `Bearer ${ACCESS_TOKEN}`,
+        Authorization: `Bearer ${import.meta.env.VITE_ACCESS_TOKEN}`,
       },
     }
 
@@ -53,7 +51,7 @@ export default function Genre(props){
 
       useEffect(() => {
 
-        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=+${searchVal}`)
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=+${searchVal}`)
         .then(res => {
 
             if(res.status >= 200 ){
