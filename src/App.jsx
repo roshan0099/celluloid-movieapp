@@ -124,7 +124,7 @@ function App() {
           <Navbar className="justify-content-end" />
           <Navbar className="nav">
             <Nav>
-              <Nav.Link href="#deets" className="nav navbar-items">Random</Nav.Link>
+              {/* <Nav.Link href="#deets" className="nav navbar-items">Random</Nav.Link> */}
               <Navbar.Text id="search" className="nav">
                 <input type="text" placeholder="search" id="movie-fetch"  onChange={fetchValue}  />
               </Navbar.Text>
