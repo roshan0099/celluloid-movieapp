@@ -1,0 +1,40 @@
+.genre-display{
+    min-width: 250px;
+}
+
+.poster-size{
+    height: 450px;
+width: 300px;
+}
+img{
+    border-radius: 12px;
+}
+
+.wrapper-poster{
+    border-radius: 20px ;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+
+    margin-top: 17px;
+
+    transition: 2s;
+}
+
+.info-wrapper{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100px;
+}
+.title{
+
+    /* background-color: aqua; */
+}
+.wrapper-poster:hover{
+    opacity: 0.9;
+}
