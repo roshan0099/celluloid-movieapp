@@ -93,7 +93,7 @@ export default function Genre(props){
             }else{
 
                 return(
-                    <div>Wow emptyy....</div>
+                    <div className='nav'> Wow emptyy....</div>
                 )
             }
 

@@ -126,7 +126,7 @@ function App() {
             <Nav>
               {/* <Nav.Link href="#deets" className="nav navbar-items">Random</Nav.Link> */}
               <Navbar.Text id="search" className="nav">
-                <input type="text" placeholder="search" id="movie-fetch"  onChange={fetchValue}  />
+                <input type="text" placeholder="search" id="movie-fetch" className="bodyBg"  onChange={fetchValue}  />
               </Navbar.Text>
             </Nav>
           </Navbar>
