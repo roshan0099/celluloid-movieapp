@@ -164,3 +164,39 @@ input {
     width: 160px;
     color: #CCC;
 }
+
+
+
+.footer {
+
+    /* position: absolute; */
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: #151f30;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  
+  #genre-display{
+    padding-bottom: 20px;
+  }
+
+  .logo-bottom{
+   
+    background-color: #151f30;;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logos{
+    padding : 12px;
+    justify-content: center;
+   flex-grow: 3;
+  }

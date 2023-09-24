@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col  from 'react-bootstrap/Col';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Genre(props){
 
@@ -76,6 +77,7 @@ export default function Genre(props){
                         searchMovieDeets.map(elm => {
                             console.log("this is elmm 0000 : ",elm.title)
                             return(<Col >
+                            <Link to={`/info/${elm.id}`} >
                             <div className='wrapper-poster'>
                             <div className='poster-size'>
                             <img src={`https://image.tmdb.org/t/p/original/${elm.poster_path}`} alt="" height={450} width={300}/>
@@ -84,7 +86,7 @@ export default function Genre(props){
                             {/* <div className='info-wrapper'>
                             <div className='title nav'>{elm.title}</div>
                             </div> */}
-                            
+                            </Link>
                             </Col>
                         )})
                     }
@@ -107,12 +109,14 @@ export default function Genre(props){
                             movieStore.map(elm => {
                                 
                                 return(<Col >
+                                <Link to={`/info/${elm.id}`}>
                                 <div className='wrapper-poster'>
                                 <div className='poster-size'>
                                 <img src={`https://image.tmdb.org/t/p/original/${elm.poster_path}`} alt="" height={450} width={300}/>
                                 </div>
 
                                 </div>
+                                </Link>
                                 </Col>
                             )})
                         }
