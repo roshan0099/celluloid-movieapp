@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import "./style/info_style.css";
 import "bootstrap"
+import waiting from "./img/waiting.gif"
 
 export default function InfoMovie() {
     const { id } = useParams();
@@ -39,7 +40,7 @@ export default function InfoMovie() {
     function DisplayDeets() {
 
         if (movieDeets.length !== 0) {
-            // console.log(movieDeets)
+            console.log("deets  : ",movieDeets)
             const style = { backgroundImage: `url('https://image.tmdb.org/t/p/original/${movieDeets.backdrop_path}')` }
             return (
                 <>
@@ -60,7 +61,7 @@ export default function InfoMovie() {
                                     <div className="rating-info">
 
                                         <span className='rate'>{movieDeets.vote_average}</span>
-                                        <span className='rate'>{movieDeets.adult}</span>
+                                        <span className='rate'>{movieDeets.release_date}</span>
                                         <span className='rate'>{`${movieDeets.runtime}min`}</span>
 
                                     </div>
@@ -80,7 +81,11 @@ export default function InfoMovie() {
         } else {
             return (
 
-                <div>Something went wrong</div>
+                <>
+                <div className='bodyBg nav'>
+                <img src={waiting} alt=""/>
+                </div>
+                </>
             )
         }
     }

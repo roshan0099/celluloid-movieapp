@@ -61,7 +61,8 @@ body{
     flex-direction: column;
      flex-wrap: wrap;
      background-color: #151f308e;
-     border-radius: 12px 12px 0px 0px;
+     border-radius: 12px 12px 12px 12px;
+     padding-bottom: 25px;
 }
 
 #movie-poster{
@@ -91,4 +92,12 @@ body{
 }
 .rate{
     margin : 20px;
+}
+
+.bodyBg{
+    background-color: #131720;
+}
+
+.nav{
+    color: white;
 }
