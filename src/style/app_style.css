@@ -200,3 +200,15 @@ input {
     justify-content: center;
    flex-grow: 3;
   }
+
+  .quote{
+    justify-content: end;
+  }
+
+
+  @media screen and (max-width: 400px) {
+    
+    .quote{
+        justify-content: center;
+      }
+}

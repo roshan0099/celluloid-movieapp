@@ -35,8 +35,6 @@ export default function Genre(props){
         axios.get(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=en-US&page=1&sort_by=popularity.desc&with_genres=${movieGenre}`,header)
         .then(res => {
             if(res.status >= 200){
-                console.log("yess")
-                console.log(res.data)
                 setMovieStore(res.data.results)
             }else{
                 console.log("something is wrong")
@@ -56,8 +54,6 @@ export default function Genre(props){
         .then(res => {
 
             if(res.status >= 200 ){
-                console.log("success")
-                console.log(res.data)
                 setSearchMovieDeets(res.data.results)
             
             }else{
@@ -75,7 +71,6 @@ export default function Genre(props){
                     <Row>
                     {
                         searchMovieDeets.map(elm => {
-                            console.log("this is elmm 0000 : ",elm.title)
                             return(<Col >
                             <Link to={`/info/${elm.id}`} >
                             <div className='wrapper-poster'>
@@ -106,9 +101,9 @@ export default function Genre(props){
                 return(
                     <Row>
                         {
-                            movieStore.map(elm => {
+                            movieStore.map((elm,id) => {
                                 
-                                return(<Col >
+                                return(<Col key={id}>
                                 <Link to={`/info/${elm.id}`}>
                                 <div className='wrapper-poster'>
                                 <div className='poster-size'>
@@ -132,7 +127,6 @@ export default function Genre(props){
 
     return(
         <>
-        {console.log("arg 1 here : ",props.arg1)}
         <div className="bodyBg ">
         <Container className="nav genre-sel">
           <Nav>

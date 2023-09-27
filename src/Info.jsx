@@ -17,12 +17,6 @@ export default function InfoMovie() {
 
     const loadingImg = useRef();
 
-    function imagedisplay(e) {
-        console.log("hai")
-        e.target.style.backgroundColor = "yellow"
-
-    }
-
     useEffect(() => {
         const a = "aaa"
         axios.get(`https://api.themoviedb.org/3/movie/${id}`, header)
@@ -40,13 +34,9 @@ export default function InfoMovie() {
     function DisplayDeets() {
 
         if (movieDeets.length !== 0) {
-            console.log("deets  : ",movieDeets)
             const style = { backgroundImage: `url('https://image.tmdb.org/t/p/original/${movieDeets.backdrop_path}')` }
             return (
                 <>
-                    <div>{console.log(movieDeets.title)}</div>
-
-
 
                     <div className="wrapper" style={style} >
 

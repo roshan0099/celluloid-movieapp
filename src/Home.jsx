@@ -15,6 +15,7 @@ import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown"
 import { Routes, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import img_github from './img/ghub.png'
 
 
 
@@ -37,11 +38,6 @@ export default function Home() {
   
     const fetchVal = useRef("")
   
-    function fetchSearchInfo(e){
-      console.log(fetchVal.current.value)
-      // setSearchMovie(e.target.value)
-  
-    }
   
     
   
@@ -50,9 +46,7 @@ export default function Home() {
         .then(res => {
   
           if (res.status >= 200) {
-            console.log("successss")
-            console.log(res.data.results)
-  
+      
             setTopMovies(res.data.results)
           }
   
@@ -62,11 +56,9 @@ export default function Home() {
   
     }, [])
   
-    console.log("000")
+
     function DisplayTopMovie() {
       if (topMovies.length != 0) {
-        console.log(topMovies[0].title)
-  
         return (
           <div className="display-carousel overflow-override bodyBg">
             {
@@ -144,11 +136,12 @@ export default function Home() {
       </div>
       {/* <Button>halo</Button> */}
   
-      <div class="footer">&copy;<span id="year" className="bodyBg"> </span><span> Celluloid. All rights reserved.</span></div>
+      <div className="footer">&copy;<span id="year" className="bodyBg"> </span><span> Celluloid. All rights reserved.</span></div>
       <div className="logo-bottom nav">
-        <div className="logos nav"> Github </div>
-        <div className="logos nav">Github </div>
-        <div className="logos nav">Github </div>
+        <div className="logos nav"><a href="https://github.com/roshan0099/celluloid-movieapp#celluloid"><img src={img_github} alt="" width="55px" height="55px" /></a></div>
+        {/* <div className="logos nav">Github </div> */}
+        
+        <div className="logos nav quote"><i>"Filmmaking is a chance to live many lifetimes."</i></div>
       </div>
    
     </>
